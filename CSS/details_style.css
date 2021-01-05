@@ -1,3 +1,18 @@
+.details_notes {
+display: inline-block;
+border: 1px solid blue;
+padding: 3px;
+box-shadow: -1px -1px 1px black, 2px 2px 3px #55aa7f; 1px 1px 0.5px #ff55ff;
+cursor: pointer;
+transition: all 0.5s linear 0.1s;
+}
+.details_notes[open] {
+box-shadow: 1px 1px 1px black, -2px -2px 3px #55aa7f; 1px 1px 0.5px #ff55ff;
+float: left;
+border-radius: 4px;
+padding: 2px;
+}
+
 details {
 display: inline-block;
 border: 1px solid blue;
@@ -13,13 +28,13 @@ float: left;
 background: linear-gradient(64deg, #fff3b5, #e0eeff);
 }
 
-.details_note summary::-webkit-details-marker {
+.details_notes summary::-webkit-details-marker {
 	display: none; /* убирает стандартный маркер в Chrome*/
 }
-.details_note > summary {
+.details_notes > summary {
 	list-style: none; /* убирает стандартный маркер в Firefox */
 }
-.details_note summary:before {
+.details_notes summary:before {
 	content: '\f0fe'; /* символ квадратика с минусом */
   	margin-right: 7px;
 }
