@@ -1,6 +1,14 @@
 import numpy as np
 from matplotlib import pyplot as plt
-from my_code2 import ComplexNumbers, avaible_functions
+from all_visualization.numbers import ComplexNumbers, PolarForm
+
+
+def test_polar_form():
+    num_list = [ComplexNumbers(100, 100), ComplexNumbers(real=-200, range_real=200, num_points_real=400, img=500)]
+    for obj in num_list:
+        print(f"obj: {obj}")
+        polar = PolarForm(base_real_instance=obj)
+
 
 
 def test_complex_numbers():
@@ -111,4 +119,5 @@ if __name__ == "__main__":
     #test_complex_numbers()
     #draw_plot()
     #simple2()
-    simple_colorbar2()
+    #simple_colorbar2()
+    test_polar_form()
